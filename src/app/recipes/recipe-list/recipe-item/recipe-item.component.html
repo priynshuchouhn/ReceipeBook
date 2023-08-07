@@ -1,1 +1,13 @@
-<p>recipe-item works!</p>
+<div class="list-group">
+    <a href="#" class="list-group-item clearfix">
+      <div class="d-flex">
+        <div class="flex-shrink-0">
+          <h4 class="list-group-item-heading">{{ recipe.name }}</h4>
+          <p class="list-group-item-text">{{ recipe.description }}</p>
+        </div>
+        <div class="ms-auto">
+          <img [src]="recipe.imagePath" alt="" class="img-fluid" style="max-height: 50px;">
+        </div>
+      </div>
+    </a>
+</div>

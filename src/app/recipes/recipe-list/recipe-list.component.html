@@ -15,19 +15,6 @@
                 <img [src]="recipe.imagePath" alt="" class="img-responsive" style="max-height: 50px;">
             </span>
         </a> -->
-        <div class="list-group">
-            <a href="#" *ngFor="let recipe of recipes" class="list-group-item clearfix">
-              <div class="d-flex">
-                <div class="flex-shrink-0">
-                  <h4 class="list-group-item-heading">{{ recipe.name }}</h4>
-                  <p class="list-group-item-text">{{ recipe.description }}</p>
-                </div>
-                <div class="ms-auto">
-                  <img [src]="recipe.imagePath" alt="" class="img-fluid" style="max-height: 50px;">
-                </div>
-              </div>
-            </a>
-        </div>
-        <app-recipe-item></app-recipe-item>
+        <app-recipe-item *ngFor="let recipeEl of recipes" [recipe]="recipeEl"></app-recipe-item>
     </div>
 </div>
