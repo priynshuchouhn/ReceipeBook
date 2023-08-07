@@ -14,4 +14,9 @@ export class ShoppingListComponent {
   ];
 
 
+  addMyIngredient(ingredients:Ingredients){
+    this.ingredients.push(ingredients);
+  }
+
+
 }
