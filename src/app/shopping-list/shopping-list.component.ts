@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Ingredients } from '../shared/ingredients.model';
 import { ShoppingListService } from './shopping-list.service';
+import { Subject } from 'rxjs';
 
 @Component({
   selector: 'app-shopping-list',
@@ -8,6 +9,8 @@ import { ShoppingListService } from './shopping-list.service';
   styleUrls: ['./shopping-list.component.css']
 })
 export class ShoppingListComponent implements OnInit{
+
+  
   
     constructor(private slService : ShoppingListService){}
   
@@ -19,6 +22,10 @@ export class ShoppingListComponent implements OnInit{
         this.ingredients = ingredients
       }
     )
+  }
+
+  editItemSelected(index: number){
+    this.slService.editItemSelect.next(index);
   }
 
 
