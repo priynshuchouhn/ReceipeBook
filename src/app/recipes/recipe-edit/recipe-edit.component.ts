@@ -74,6 +74,7 @@ recipeForm!: FormGroup
     }else{
       this.recipeService.addRecipe(this.recipeForm.value);
     }
+    this.onClear();
   }
 
   onClear(){
