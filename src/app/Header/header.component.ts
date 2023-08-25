@@ -15,6 +15,6 @@ export class HeaderComponent {
 
    onFetch(){
     console.log("button clicked");
-    this.dataStorage.fetchRecipes();
+    this.dataStorage.fetchRecipes().subscribe();
    }
 }
