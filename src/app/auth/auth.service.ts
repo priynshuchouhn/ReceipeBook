@@ -53,6 +53,7 @@ export class AuthService {
   }
 
   autoLogin(){
+    console.timeLog("hello world")
     const userData: {
       email:string,
       id: string,

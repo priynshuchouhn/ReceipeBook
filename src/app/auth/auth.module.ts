@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { AuthComponent } from './auth.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { SharedModule } from '../shared/shared.module';
+import { RouterModule } from '@angular/router';
 
 
 
@@ -13,7 +14,11 @@ import { SharedModule } from '../shared/shared.module';
   imports: [
     CommonModule,
     ReactiveFormsModule,
-    SharedModule
+    SharedModule,
+    RouterModule.forChild([{path:'', component:AuthComponent}])
+  ],
+  exports:[
+    RouterModule
   ]
 })
 export class AuthModule { }
